@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>需求管理</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/todos.css"/>
+</head>
+
+<body>
+
+  <div id="todoapp">
+
+    <header>
+      <h1>需求管理</h1>
+      <input id="new-todo" type="text" placeholder="请提需求">
+    </header>
+
+    <section id="main">
+      <input id="toggle-all" type="checkbox">
+      <label for="toggle-all">标记所有完成</label>
+      <ul id="todo-list"></ul>
+    </section>
+
+    <footer>
+      <a id="clear-completed">清除完成的需求</a>
+      <div id="todo-count"></div>
+    </footer>
+
+  </div>
+
+  <div id="instructions">
+    双击去更改需求。
+  </div>
+
+  <div id="credits">
+    <br />Rewritten by: <a href="http://github.com/brogramer/todos">需求管理</a>.
+  </div>
+
+  <script src="/js/lib/jquery-1.10.2.min.js"></script>
+  <script src="/js/lib/underscore-1.5.2.min.js"></script>
+  <script src="/js/lib/firebase.js"></script>
+  <script src="/js/lib/backbone-1.1.0.min.js"></script>
+  <script src="/js/lib/backbone-firebase.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  <script src="/js/todos.js"></script>
+
+  <!-- Templates -->
+
+  <script type="text/template" id="item-template">
+    <div class="view">
+      <input class="toggle" type="checkbox" <%= done ? 'checked="checked"' : '' %> />
+      <label><%- title %></label>
+      <a class="destroy"></a>
+      <div class="unvoted">
+        <label><%= vote %></label>
+        <span class="glyphicon glyphicon-arrow-up"></span>
+        <span class="glyphicon glyphicon-arrow-down"></span>
+      </div>
+    </div>
+    <input class="edit" type="text" value="<%- title %>" />
+</script>
+
+  <script type="text/template" id="stats-template">
+    <% if (done) { %>
+      <a id="clear-completed">清除 <%= done %> 个完成的需求</a>
+    <% } %>
+    <div class="todo-count">还剩<b><%= remaining %></b>个需求未完成</div>
+  </script>
+
+  </body>
+</html>
