@@ -1,0 +1,1 @@
+FIREBASE_URL = "https://requirements.firebaseio.com";

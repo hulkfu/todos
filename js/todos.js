@@ -10,7 +10,7 @@ $(function(){
     // Default attributes for the todo item.
     defaults: function() {
       return {
-        title: "empty todo...",
+        title: "闲得蛋疼...",
         vote: 0,
         done: false
       };
@@ -40,7 +40,7 @@ $(function(){
     model: Todo,
 
     // Save all of the todo items under the `"requirements"` namespace.
-    firebase: new Backbone.Firebase("https://requirements.firebaseio.com"),
+    firebase: new Backbone.Firebase(FIREBASE_URL),
 
     // Filter down the list of all todo items that are finished.
     done: function() {

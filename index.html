@@ -33,6 +33,9 @@
   <div id="instructions">
     <p>双击去更改需求</p>
     <p><b>登录才能修改哦</b></p>
+    <div id="users">
+      当前在线人数 <b><span id="users-count">0</span></b>
+    </div>
     <img src="/images/github-icon.png" />
     <a href="javascript: login('github');">github登录</a>
   </div>
@@ -47,9 +50,11 @@
   <script src="/js/lib/backbone-firebase.min.js"></script>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
   <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase-simple-login.js'></script>
+  <script src="/js/config.js"></script>
   <script src="/js/users.js"></script>
   <script src="/js/todos.js"></script>
   <script src="/js/main.js"></script>
+
   <!-- Templates -->
 
   <script type="text/template" id="item-template">
@@ -64,7 +69,7 @@
       </div>
     </div>
     <input class="edit" type="text" value="<%- title %>" />
-</script>
+  </script>
 
   <script type="text/template" id="stats-template">
     <% if (done) { %>
