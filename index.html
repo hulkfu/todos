@@ -31,9 +31,11 @@
   </div>
 
   <div id="instructions">
-    双击去更改需求。
+    <p>双击去更改需求</p>
+    <p><b>登录才能修改哦</b></p>
+    <img src="/images/github-icon.png" />
+    <a href="javascript: login('github');">github登录</a>
   </div>
-
   <div id="credits">
     <br />Rewritten by: <a href="http://github.com/brogramer/todos">需求管理</a>.
   </div>
@@ -45,7 +47,8 @@
   <script src="/js/lib/backbone-firebase.min.js"></script>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
   <script src="/js/todos.js"></script>
-
+  <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase-simple-login.js'></script>
+  <script src="/js/main.js"></script>
   <!-- Templates -->
 
   <script type="text/template" id="item-template">

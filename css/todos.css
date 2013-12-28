@@ -199,6 +199,11 @@ body {
 	color: #336699;
 }
 
+#instructions img {
+  width: 30px;
+  height: 30px;
+}
+
 #credits {
 	margin: 30px auto;
 	color: #999;
