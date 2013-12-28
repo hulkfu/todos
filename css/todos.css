@@ -95,7 +95,7 @@ body {
 }
 
 #todo-list li:hover .destroy {
-  	display: block;
+  	/*display: block;*/
 }
 
 #todo-list .destroy:hover {
